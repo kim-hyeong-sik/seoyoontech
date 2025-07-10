@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>제품 상세보기 - 서윤테크</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+    .image-container {
+      margin-top: 50px;
+    }
+    img {
+      max-width: 90%;
+      height: auto;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const image = urlParams.get('img');
+      if (image) {
+        document.write(`<img src="${image}" alt="제품 상세 이미지" />`);
+      } else {
+        document.write('<p>이미지를 불러올 수 없습니다.</p>');
+      }
+    </script>
+  </div>
+  <a href="index.html">← 돌아가기</a>
+</body>
+</html>
